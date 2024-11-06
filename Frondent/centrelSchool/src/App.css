@@ -1,0 +1,58 @@
+/* App.css */
+
+/* Ensure the container fills the full viewport height and is scrollable */
+body, html, #root {
+  height: 100%;
+ 
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Enable vertical scrolling for mobile views */
+@media (max-width: 768px) {
+  .container {
+    overflow-y: auto; /* Allows vertical scrolling */
+    padding: 0 10px; /* Adds padding for better readability on small screens */
+  }
+}
+
+/* Carousel image and video scaling for mobile */
+.carousel-item img, .carousel-item video {
+  width: 100%;
+  height: auto; /* Scale images/videos proportionally */
+  object-fit: cover; /* Ensure content fits nicely */
+}
+
+/* Carousel buttons and indicators for mobile */
+.carousel-button, .carousel-indicator {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adjust sections for mobile spacing */
+.section {
+  padding: 1rem 0.5rem; /* Smaller padding for mobile screens */
+}
+
+/* Adjust text size and layout for mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem; /* Smaller font size for titles on mobile */
+  }
+
+  .text-content {
+    font-size: 1rem; /* Adjusts paragraph font for readability */
+  }
+}
